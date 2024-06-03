@@ -1,0 +1,33 @@
+Program start
+HashTable details: 31 slots, 0 occupied, load factor = 0.0
+Start reading songs from file resources/songs.txt
+   22 keys read, HashTable expansion needed
+       Before expansion: 31 slots, 22 occupied, load factor = 0.7096774193548387
+       After expansion: 67 slots, 22 occupied, load factor = 0.3283582089552239
+   47 keys read, HashTable expansion needed
+       Before expansion: 67 slots, 47 occupied, load factor = 0.7014925373134329
+       After expansion: 137 slots, 47 occupied, load factor = 0.34306569343065696
+   96 keys read, HashTable expansion needed
+       Before expansion: 137 slots, 96 occupied, load factor = 0.7007299270072993
+       After expansion: 277 slots, 96 occupied, load factor = 0.34657039711191334
+   194 keys read, HashTable expansion needed
+       Before expansion: 277 slots, 194 occupied, load factor = 0.7003610108303249
+       After expansion: 557 slots, 194 occupied, load factor = 0.348294434470377
+   390 keys read, HashTable expansion needed
+       Before expansion: 557 slots, 390 occupied, load factor = 0.7001795332136446
+       After expansion: 1117 slots, 390 occupied, load factor = 0.34914950760966873
+   782 keys read, HashTable expansion needed
+       Before expansion: 1117 slots, 782 occupied, load factor = 0.7000895255147717
+       After expansion: 2237 slots, 782 occupied, load factor = 0.34957532409476977
+   1566 keys read, HashTable expansion needed
+       Before expansion: 2237 slots, 1566 occupied, load factor = 0.7000447027268664
+       After expansion: 4481 slots, 1566 occupied, load factor = 0.34947556349029235
+   3137 keys read, HashTable expansion needed
+       Before expansion: 4481 slots, 3137 occupied, load factor = 0.7000669493416648
+       After expansion: 8963 slots, 3137 occupied, load factor = 0.3499944215106549
+End reading songs from file resources/songs.txt
+HashTable details: 8963 slots, 4731 occupied, load factor = 0.5278366618319759
+Number of unique keys inserted into HashTable = 4731
+Number of key conflicts encountered = 356159
+
+Now starting search of songs
