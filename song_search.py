@@ -66,10 +66,6 @@ def find_words(hash_table, filename):
     :param filename: File of words to check for in the songs of the hash table
     :return: None, but print the found songs.
     """
-    #For each word listed in filename
-    #find corresponding song titles in hash_table and
-    #print the results out in the format
-    #shown in assignment
     print("Searching for words listed in ", filename)
     infile = open(filename, "r")
 
@@ -140,106 +136,6 @@ def find_phrases(hash_table, filename):
     infile.close()
     return None
 
-# def find_phrases(hash_table, filename):
-#     """
-#     Looks for songs with the specified word in the hash table
-#     :param hash_table: The built hash_table to be searched through
-#     :param filename: File of phrases to check for in the songs of the hash table
-#     :return: None, but print the found phrases.
-#     """
-#     print("Searching for phrases listed in ", filename)
-#     with open(filename, "r") as infile:
-#         for line in infile:
-#             line = line.strip()
-#             words_list = line.split()
-#             capitalized_words = [word.capitalize() for word in words_list]
-#             phrase = " ".join(capitalized_words)
-#
-#             slots_examined = 0
-#             songs_with_phrase = set()
-#             for word in words_list:
-#                 result = hash_table.get(word)
-#                 slots_examined += hash_table.rehash_attempt
-#                 for item in result:
-#                     song_title = item[1]
-#                     if phrase in song_title:
-#                         songs_with_phrase.add(item)
-#
-#             song_amount = len(songs_with_phrase)
-#             print(f"{song_amount} songs contain the phrase '{phrase.lower()}' in their title")
-#
-#             number = 1
-#             for item in songs_with_phrase:
-#                 index, song_name, artist = item
-#                 print(f"   {number}. {index}, {song_name}, {artist}")
-#                 number += 1
-#             print()
-#             print(f"This search examined {slots_examined} slot(s) in the hash table")
-#             print("-----------------------------------------------------------")
-#             print()
-#
-#     return None
-
-# def find_phrases(hash_table, filename):
-#     """
-#     Looks for songs with the specified word in the hash table
-#     :param hash_table: The built hash_table to be searched through
-#     :param filename: File of phrases to check for in the songs of the hash table
-#     :return: None, but print the found phrases.
-#     """
-#     #For each phrase listed in filename
-#     #find corresponding song titles in hash_table and
-#     #print the results out in the format
-#     #shown in assignment
-#     print("Searching for phrases listed in ", filename)
-#     infile = open(filename, "r")
-#     for line in infile:
-#         line = line.strip()
-#         words_list = line.split()
-#         capitalized_words = line.split()        # Create additional group of words so they may be capitalized
-#         phrase = ""                             # Empty string to make the phrase
-#         songs_with_phrase = []                  # Empty list to append songs to
-#
-#
-#         for idx in range(0, len(capitalized_words), 1):             # Capitalize all words and put them in a string
-#             capitalized_words[idx] = capitalized_words[idx].capitalize()
-#             phrase += capitalized_words[idx] + " "
-#
-#
-#         slots_examined = 0                          # Slot_examined counter counts the total amount of rehash attempts
-#         for idx in range(0, len(words_list), 1):    # Iterate through the words in words list and get the slot from the hash table using get()
-#             result = hash_table.get(words_list[idx])
-#             slots_examined += hash_table.rehash_attempt
-#             for item in result:
-#                 song_title = item[1]
-#                 song_title = str(song_title + " ")
-#                 if phrase in song_title:
-#                     songs_with_phrase.append(item)
-#
-#         # songs_with_phrase = set(songs_with_phrase)   # Placing in set eliminates duplicates
-#         songs_with_phrase_no_duplicates = []
-#         for song in songs_with_phrase:
-#             if song not in songs_with_phrase_no_duplicates:
-#                 songs_with_phrase_no_duplicates.append(song)
-#
-#         song_amount = len(songs_with_phrase_no_duplicates)
-#         print(str(song_amount) + ' songs contain the phrase "' + str(phrase).strip().lower() + '" in their title')
-#
-#         number = 1
-#         for item in songs_with_phrase_no_duplicates:
-#             index = item[0]
-#             song_name = item[1]
-#             artist = item[2]
-#             print("   ", str(number) + ". " + str(index) + ", " + str(song_name) + ", " + str(artist))
-#             number += 1
-#         print()
-#         print("This search examined " + str(slots_examined) + " slot(s) in the hash table")
-#         print("-----------------------------------------------------------")
-#         print()
-#
-#     infile.close()
-#     return None
-
 def main():
 
     hash_table = build_hash_table("resources/songs.txt")
@@ -248,5 +144,9 @@ def main():
 
     find_phrases(hash_table, "phrases.txt")
 
+
 main()
+
+
+
 
