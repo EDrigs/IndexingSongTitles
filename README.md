@@ -5,8 +5,8 @@ This project involves building a hash table to store and search for songs and th
 ## Files
 
 - `song_search.py`: Main script for building the hash table and searching for songs based on words or phrases.
-- `hash_table.py`: (not included) Contains the `HashTable` class definition and relevant methods for storing and retrieving data.
-- `resources/songs.txt`: (not included) File containing song data in the format `song_title :: artist`.
+- `hash_table.py`: Contains the `HashTable` class definition and relevant methods for storing and retrieving data.
+- `resources/songs.txt`: File containing song data in the format `song_title :: artist`.
 - `words.txt`: File containing words to search for in song titles.
 - `phrases.txt`: File containing phrases to search for in song titles.
 - `logfile.txt`: Log file generated during the execution of the script.
